@@ -9,4 +9,5 @@
     <string name="svc_un_avail">Service Unavailable</string>
     <string name="connection_error">Failed to connect</string>
     <string name="timeout">Timeout</string>
+    <string name="description">description</string>
 </resources>

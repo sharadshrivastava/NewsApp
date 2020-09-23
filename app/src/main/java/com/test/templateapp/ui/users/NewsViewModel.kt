@@ -7,16 +7,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.test.templateapp.data.network.Resource
 import com.test.templateapp.domain.model.ApiResponse
-import com.test.templateapp.domain.model.ToDoItem
-import com.test.templateapp.domain.usecases.UserUseCase
+import com.test.templateapp.domain.usecases.NewsUseCase
 
-class UserDetailsViewModel @ViewModelInject constructor(
-    private val useCase: UserUseCase,
+class NewsViewModel @ViewModelInject constructor(
+    private val useCase: NewsUseCase,
     @Assisted private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    fun userDetails(id: Int) = liveData {
-        emit(Resource.loading<ToDoItem>())
-        emit(useCase.userDetails(id))
+    var feeds = liveData {
+        //emit(Resource.loading<ApiResponse>())
+        emit(useCase.newsFeeds())
     }
 }

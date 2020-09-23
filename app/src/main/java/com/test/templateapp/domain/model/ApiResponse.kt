@@ -1,3 +1,7 @@
 package com.test.templateapp.domain.model
 
-class ApiResponse : ArrayList<ToDoItem>()
+data class ApiResponse(
+    val feed: Feed?,
+    val items: List<Item>?,
+    val status: String?
+)
