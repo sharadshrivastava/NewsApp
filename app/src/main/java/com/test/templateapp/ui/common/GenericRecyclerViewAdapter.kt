@@ -5,40 +5,36 @@ import android.view.ViewGroup
 import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.test.templateapp.BR
 
-/*@BindingAdapter(value = ["items", "itemLayout"], requireAll = true)
-fun <T> configureRecyclerView(recyclerView: RecyclerView, items: List<Any>?, layoutIDs: List<Int>){
-    if(recyclerView.adapter == null){
-        recyclerView.adapter = GenericRecyclerViewAdapter(items, layoutIDs, null)
-    }else{
-        (recyclerView.adapter as GenericRecyclerViewAdapter).setItems(items)
-    }
-}*/
-
-@BindingAdapter(value = ["items", "itemLayout"], requireAll = true)
-fun <T> configureRecyclerView(recyclerView: RecyclerView, items: List<Any>?, layoutIDs: Int){
-    if(recyclerView.adapter == null){
-        recyclerView.adapter = GenericRecyclerViewAdapter(items, listOf(layoutIDs), null)
-    }else{
+@BindingAdapter(value = ["items", "itemLayout", "clickListener"], requireAll = true)
+fun <T> configureRecyclerView(
+    recyclerView: RecyclerView,
+    items: List<Any>?,
+    layoutIDs: Array<Int>,
+    clickListener: MutableLiveData<out Any>?
+) {
+    if (recyclerView.adapter == null) {
+        recyclerView.adapter = GenericRecyclerViewAdapter(items, layoutIDs, clickListener)
+    } else {
         (recyclerView.adapter as GenericRecyclerViewAdapter).setItems(items)
     }
 }
 
 class GenericRecyclerViewAdapter(
     var list: List<Any>?,
-    private val layoutIDs: List<Int>,
-    private val listener: OnItemClickListener?
+    private val layoutIDs: Array<Int>,
+    private val clickListener: MutableLiveData<out Any>?
 ) : RecyclerView.Adapter<GenericRecyclerViewAdapter.GenericViewHolder<Any>>() {
 
     private lateinit var binding: ViewDataBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GenericViewHolder<Any> {
         val inflater = LayoutInflater.from(parent.context)
-        binding = DataBindingUtil.inflate(inflater, layoutIDs[0], parent, false)
-        return GenericViewHolder(binding, listener)
+        binding = DataBindingUtil.inflate(inflater, viewType, parent, false)
+        return GenericViewHolder(binding, clickListener)
     }
 
     override fun onBindViewHolder(holder: GenericViewHolder<Any>, position: Int) {
@@ -50,10 +46,8 @@ class GenericRecyclerViewAdapter(
     }
 
     override fun getItemViewType(position: Int): Int {
-//        return layoutIDs.getOrElse(position) {
-//            0
-//        }
-        return 0
+        return if (layoutIDs.size > 1) if (position == 0) layoutIDs[0] else layoutIDs[1]
+        else super.getItemViewType(position)
     }
 
     fun setItems(list: List<Any>?) {
@@ -61,19 +55,14 @@ class GenericRecyclerViewAdapter(
         notifyDataSetChanged()
     }
 
-    interface OnItemClickListener {
-        fun onItemClick(id: Int?)
-    }
-
     class GenericViewHolder<T>(
-        private val binding: ViewDataBinding, private val listener: OnItemClickListener?
+        private val binding: ViewDataBinding, private val clickListener: MutableLiveData<out Any>?
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: T?) {
             binding.setVariable(BR.item, item)
-
             itemView.setOnClickListener {
-                //listener.onItemClick(item.id)
+                clickListener?.value = item
             }
         }
     }

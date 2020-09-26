@@ -19,8 +19,8 @@
         android:label="@string/news_details">
         <argument
             android:name="id"
-            android:defaultValue="-1"
-            app:argType="integer" />
+            android:defaultValue=" "
+            app:argType="string" />
     </fragment>
 
 </navigation>
