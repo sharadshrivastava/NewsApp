@@ -7,11 +7,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="BlackTextStyle" parent="TextAppearance.AppCompat">
-        <item name="android:textColor">@android:color/black</item>
-    </style>
-
-    <style name="BlackTextStyle.TitleStyle">
+    <style name="TitleStyle" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@color/colorCity</item>
         <item name="android:textSize">@dimen/text_size_header</item>
         <item name="android:textStyle">bold</item>

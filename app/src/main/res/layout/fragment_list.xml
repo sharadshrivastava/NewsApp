@@ -35,12 +35,13 @@
             android:id="@+id/rvList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/std_margin"
             android:layout_marginEnd="@dimen/std_margin"
             android:layout_marginStart="@dimen/std_margin"
             android:background="@android:color/white"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:items="@{vm.feeds.data.items}"
-            app:itemLayout='@{@layout/layout_news_item_big}'
+            app:itemLayout="@{@layout/layout_news_item_latest}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:visibility="@{isLoading ? View.GONE : View.VISIBLE}"/>

@@ -30,7 +30,7 @@
 
         <TextView
             android:id="@+id/newsTitle"
-            style="@style/BlackTextStyle.TitleStyle"
+            style="@style/TitleStyle"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/std_margin"
@@ -57,7 +57,6 @@
 
         <TextView
             android:id="@+id/newsTime"
-            style="@style/BlackTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="@id/newsTitle"
