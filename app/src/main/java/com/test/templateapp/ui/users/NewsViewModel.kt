@@ -3,6 +3,8 @@ package com.test.templateapp.ui.users
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
+import com.test.templateapp.data.network.Resource
+import com.test.templateapp.domain.model.ApiResponse
 import com.test.templateapp.domain.model.Feed
 import com.test.templateapp.domain.model.Item
 import com.test.templateapp.domain.usecases.NewsUseCase
@@ -12,12 +14,11 @@ class NewsViewModel @ViewModelInject constructor(
     @Assisted private val savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    var clickEvent  = MutableLiveData<Item>()
+    var clickListener  = MutableLiveData<Item>()
     var layoutIds: Array<Int>? = null
 
     var feeds = liveData {
-        //emit(Resource.loading<ApiResponse>())
+        emit(Resource.loading())
         emit(useCase.newsFeeds())
     }
-
 }

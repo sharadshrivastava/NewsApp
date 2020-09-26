@@ -1,5 +1,9 @@
 package com.test.templateapp.domain.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class Item(
     val author: String?,
     val categories: List<String>?,
@@ -11,4 +15,4 @@ data class Item(
     val pubDate: String?,
     val thumbnail: String?,
     val title: String?
-)
+): Parcelable

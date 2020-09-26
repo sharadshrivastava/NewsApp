@@ -15,8 +15,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="@dimen/row_height_big"
-        android:maxHeight="@dimen/row_height_big">
+        android:minHeight="@dimen/row_height_big">
 
         <ImageView
             android:id="@+id/newsImage"
@@ -46,6 +45,7 @@
             tools:text="Paramount Film Studio to layoff 5% of its people. Paramount Film Studio to layoff 5% of its people. Paramount Film Studio to layoff 5% of its peoples." />
 
         <View
+            android:id="@+id/divider"
             android:layout_width="0dp"
             android:layout_height="@dimen/one_dp"
             android:background="@color/colorGrayBg"

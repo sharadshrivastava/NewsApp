@@ -52,6 +52,6 @@ class Resource<T> private constructor(val status: Status, val data: T?, val mess
 
         fun <T> error(msg: String, data: T?) = Resource(Status.ERROR, data, msg)
 
-        fun <T> loading() = Resource(Status.LOADING, null, null)
+        fun <T> loading(data: T? = null) = Resource(Status.LOADING, data, null)
     }
 }

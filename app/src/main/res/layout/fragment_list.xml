@@ -42,7 +42,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:items="@{vm.feeds.data.items}"
             app:itemLayout="@{vm.layoutIds}"
-            app:clickListener="@{vm.clickEvent}"
+            app:clickListener="@{vm.clickListener}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:visibility="@{isLoading ? View.GONE : View.VISIBLE}"/>

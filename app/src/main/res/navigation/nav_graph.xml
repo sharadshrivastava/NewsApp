@@ -18,9 +18,8 @@
         android:name="com.test.templateapp.ui.users.NewsDetailsFragment"
         android:label="@string/news_details">
         <argument
-            android:name="id"
-            android:defaultValue=" "
-            app:argType="string" />
+            android:name="item"
+            app:argType="com.test.templateapp.domain.model.Item"/>
     </fragment>
 
 </navigation>
