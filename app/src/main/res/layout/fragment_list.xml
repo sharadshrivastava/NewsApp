@@ -40,7 +40,7 @@
             android:background="@android:color/white"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:items="@{vm.feeds.data.items}"
-            app:itemLayout='@{@layout/layout_news_item}'
+            app:itemLayout='@{@layout/layout_news_item_big}'
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:visibility="@{isLoading ? View.GONE : View.VISIBLE}"/>

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">TemplateApp</string>
+    <string name="news_feed">News Feeds</string>
+    <string name="news_details">News Details</string>
 
     <string name="network_error">Network Error</string>
     <string name="response_error">Something went wrong</string>

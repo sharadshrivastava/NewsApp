@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.test.templateapp.ui.users.NewsListFragment"
-        android:label="UserList">
+        android:label="@string/news_feed">
         <action
             android:id="@+id/listFragmentAction"
             app:destination="@id/detailsFragment" />
@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.test.templateapp.ui.users.NewsDetailsFragment"
-        android:label="UserDetails">
+        android:label="@string/news_details">
         <argument
             android:name="id"
             android:defaultValue="-1"

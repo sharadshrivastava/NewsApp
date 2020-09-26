@@ -15,44 +15,52 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/std_margin"
-        android:minHeight="@dimen/row_height"
-        android:maxHeight="@dimen/row_height">
+        android:minHeight="@dimen/row_height_big"
+        android:maxHeight="@dimen/row_height_big">
 
         <ImageView
             android:id="@+id/newsImage"
-            android:layout_width="126dp"
-            android:layout_height="152dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:contentDescription="@string/description"
-            android:scaleType="fitCenter"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:downloadUrl='@{item.thumbnail}'
-            tools:src="@drawable/sample" />
+            app:downloadUrl='@{item.enclosure.link}'
+            tools:src="@drawable/sample_big" />
 
         <TextView
             android:id="@+id/newsTitle"
             style="@style/BlackTextStyle.TitleStyle"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/std_margin"
             android:layout_marginBottom="@dimen/std_margin"
-            android:maxLines="3"
+            android:layout_marginStart="@dimen/std_margin"
+            android:maxLines="2"
             android:ellipsize="end"
             android:text='@{item.title}'
             android:layout_marginEnd="@dimen/std_tiny_margin"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/newsImage"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newsImage"
             app:layout_constraintBottom_toTopOf="@id/newsTime"
             tools:text="Paramount Film Studio to layoff 5% of its people. Paramount Film Studio to layoff 5% of its people. Paramount Film Studio to layoff 5% of its peoples." />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/one_dp"
+            android:background="@color/colorGrayBg"
+            android:layout_marginBottom="@dimen/std_tiny_margin"
+            android:layout_marginEnd="@dimen/std_margin"
+            app:layout_constraintStart_toStartOf="@id/newsTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/newsTime"/>
 
         <TextView
             android:id="@+id/newsTime"
             style="@style/BlackTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/newsTitle"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="@dimen/std_short_margin"
             app:formattedDate='@{item.pubDate}'
