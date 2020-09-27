@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.test.templateapp.domain.model.Item" />
+            type="com.test.newsapp.domain.model.Item" />
 
         <import type="android.view.View" />
     </data>

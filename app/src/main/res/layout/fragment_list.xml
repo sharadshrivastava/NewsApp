@@ -10,7 +10,7 @@
 
         <variable
             name="vm"
-            type="com.test.templateapp.ui.users.NewsViewModel" />
+            type="com.test.newsapp.ui.news.NewsViewModel" />
 
         <import type="android.view.View" />
     </data>

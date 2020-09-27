@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.test.templateapp.ui.users.NewsListFragment"
+        android:name="com.test.newsapp.ui.news.NewsListFragment"
         android:label="@string/news_feed">
         <action
             android:id="@+id/listFragmentAction"
@@ -15,11 +15,11 @@
 
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.test.templateapp.ui.users.NewsDetailsFragment"
+        android:name="com.test.newsapp.ui.news.NewsDetailsFragment"
         android:label="@string/news_details">
         <argument
             android:name="item"
-            app:argType="com.test.templateapp.domain.model.Item"/>
+            app:argType="com.test.newsapp.domain.model.Item"/>
     </fragment>
 
 </navigation>
