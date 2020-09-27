@@ -22,11 +22,12 @@
         <ImageView
             android:id="@+id/newsImage"
             android:layout_width="@dimen/thumbnail_img_width"
-            android:layout_height="@dimen/thumbnail_img_height"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/description"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:downloadUrl='@{item.thumbnail}'
             tools:src="@drawable/sample" />
 

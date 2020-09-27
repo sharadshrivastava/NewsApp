@@ -14,7 +14,7 @@
 
     <style name="BlackStyle.TitleStyle">
         <item name="android:textColor">@color/colorCity</item>
-        <item name="android:textSize">@dimen/text_size_header</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
         <item name="android:textStyle">bold</item>
     </style>
 

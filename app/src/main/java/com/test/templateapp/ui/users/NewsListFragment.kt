@@ -27,7 +27,6 @@ class NewsListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        vm.layoutIds = arrayOf(R.layout.layout_news_item_latest, R.layout.layout_news_item)
         return FragmentListBinding.inflate(inflater, container, false).apply {
             binding = this
             lifecycleOwner = this@NewsListFragment
