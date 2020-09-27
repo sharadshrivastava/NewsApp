@@ -1,0 +1,234 @@
+{
+    "status": "ok",
+    "feed": {
+        "url": "http://www.abc.net.au/news/feed/51120/rss.xml",
+        "title": "Just In",
+        "link": "http://www.abc.net.au/news/justin/",
+        "author": "",
+        "description": "",
+        "image": "http://www.abc.net.au/news/image/8413416-1x1-144x144.png"
+    },
+    "items": [
+        {
+            "title": "Scott McLaughlin claims third straight Supercars Championship",
+            "pubDate": "2020-09-27 09:07:52",
+            "link": "http://www.abc.net.au/news/2020-09-27/supercars-scott-mclaughlin-wins-third-straight-championship/12708686",
+            "guid": "http://www.abc.net.au/news/2020-09-27/supercars-scott-mclaughlin-wins-third-straight-championship/12708686",
+            "author": "",
+            "thumbnail": "http://www.abc.net.au/news/image/11597646-4x3-140x105.jpg",
+            "description": "<p>Scott McLaughlin joins illustrious company in completing a championship three-peat, wrapping up the title in the penultimate round in South Australia.</p>",
+            "content": "<p>Scott McLaughlin joins illustrious company in completing a championship three-peat, wrapping up the title in the penultimate round in South Australia.</p>",
+            "enclosure": {
+                "link": "http://www.abc.net.au/news/image/11597646-16x9-2150x1210.jpg",
+                "type": "image/jpeg",
+                "thumbnail": "http://www.abc.net.au/news/image/11597646-4x3-140x105.jpg"
+            },
+            "categories": [
+                "Motor Sports",
+                "Sport",
+                "Australian Touring Cars"
+            ]
+        },
+        {
+            "title": "Vixens down Lightning to reach Super Netball finals on winning note",
+            "pubDate": "2020-09-27 07:46:37",
+            "link": "http://www.abc.net.au/news/2020-09-27/melbourne-vixens-down-sunshine-coast-lightning-in-super-netball/12708488",
+            "guid": "http://www.abc.net.au/news/2020-09-27/melbourne-vixens-down-sunshine-coast-lightning-in-super-netball/12708488",
+            "author": "",
+            "thumbnail": "http://www.abc.net.au/news/image/12708492-4x3-140x105.jpg",
+            "description": "<p>In a clash between the top two sides this season, Melbourne Vixens show why they are title favourites with a 58-54 defeat of Sunshine Coast Lightning.</p>",
+            "content": "<p>In a clash between the top two sides this season, Melbourne Vixens show why they are title favourites with a 58-54 defeat of Sunshine Coast Lightning.</p>",
+            "enclosure": {
+                "link": "http://www.abc.net.au/news/image/12708492-16x9-2150x1210.jpg",
+                "type": "image/jpeg",
+                "thumbnail": "http://www.abc.net.au/news/image/12708492-4x3-140x105.jpg"
+            },
+            "categories": [
+                "Sport",
+                "Netball"
+            ]
+        },
+        {
+            "title": "Here are the key points from the modelling behind Victoria's next steps out of lockdown",
+            "pubDate": "2020-09-27 07:22:42",
+            "link": "http://www.abc.net.au/news/2020-09-27/victorian-coronavirus-modelling-released-as-restrictions-eased/12708480",
+            "guid": "http://www.abc.net.au/news/2020-09-27/victorian-coronavirus-modelling-released-as-restrictions-eased/12708480",
+            "author": "Yara Murray-Atfield",
+            "thumbnail": "http://www.abc.net.au/news/image/12708738-4x3-140x105.jpg",
+            "description": "<p>According to COVID-19 modelling released by the Victorian Government today, primary school students are at a \"lower risk\" than initially thought, there's still a risk of a third wave of infection and the effective reproduction rate is dropping.</p>",
+            "content": "<p>According to COVID-19 modelling released by the Victorian Government today, primary school students are at a \"lower risk\" than initially thought, there's still a risk of a third wave of infection and the effective reproduction rate is dropping.</p>",
+            "enclosure": {
+                "link": "http://www.abc.net.au/news/image/12708738-16x9-2150x1210.jpg",
+                "type": "image/jpeg",
+                "thumbnail": "http://www.abc.net.au/news/image/12708738-4x3-140x105.jpg"
+            },
+            "categories": [
+                "Health",
+                "Diseases and Disorders",
+                "COVID-19",
+                "Epidemics and Pandemics",
+                "Government and Politics",
+                "Social Distancing",
+                "Lockdown",
+                "Community and Society"
+            ]
+        },
+        {
+            "title": "Melbourne Storm fall to Dragons ahead of NRL finals",
+            "pubDate": "2020-09-27 06:57:35",
+            "link": "http://www.abc.net.au/news/2020-09-27/nrl-dragons-beat-melbourne-storm-warriors-down-manly/12708506",
+            "guid": "http://www.abc.net.au/news/2020-09-27/nrl-dragons-beat-melbourne-storm-warriors-down-manly/12708506",
+            "author": "",
+            "thumbnail": "http://www.abc.net.au/news/image/12708712-4x3-140x105.jpg",
+            "description": "<p>The Dragons hand the understrength Storm a 30-22 loss on the eve of the finals, while the selfless Warriors prepare to head home to New Zealand after finishing off their season with a win over Manly.</p>",
+            "content": "<p>The Dragons hand the understrength Storm a 30-22 loss on the eve of the finals, while the selfless Warriors prepare to head home to New Zealand after finishing off their season with a win over Manly.</p>",
+            "enclosure": {
+                "link": "http://www.abc.net.au/news/image/12708712-16x9-2150x1210.jpg",
+                "type": "image/jpeg",
+                "thumbnail": "http://www.abc.net.au/news/image/12708712-4x3-140x105.jpg"
+            },
+            "categories": [
+                "NRL",
+                "Rugby League",
+                "Sport"
+            ]
+        },
+        {
+            "title": "Easing of meat processing restrictions in Victoria just in time to meet Christmas demands, says industry",
+            "pubDate": "2020-09-27 05:08:41",
+            "link": "http://www.abc.net.au/news/rural/2020-09-27/restrictions-ease-on-victorian-meat-processing/12675168",
+            "guid": "http://www.abc.net.au/news/rural/2020-09-27/restrictions-ease-on-victorian-meat-processing/12675168",
+            "author": "Jane McNaughton",
+            "thumbnail": "http://www.abc.net.au/news/image/12699726-4x3-140x105.jpg",
+            "description": "<p>Meatworks in both metropolitan Melbourne and regional Victoria will be able to increase workforce numbers under the next step of the state's roadmap to recovery.</p>",
+            "content": "<p>Meatworks in both metropolitan Melbourne and regional Victoria will be able to increase workforce numbers under the next step of the state's roadmap to recovery.</p>",
+            "enclosure": {
+                "link": "http://www.abc.net.au/news/image/12699726-16x9-2150x1210.jpg",
+                "type": "image/jpeg",
+                "thumbnail": "http://www.abc.net.au/news/image/12699726-4x3-140x105.jpg"
+            },
+            "categories": [
+                "Food Processing",
+                "Lifestyle and Leisure",
+                "Lockdown",
+                "COVID-19",
+                "Livestock",
+                "Government and Politics"
+            ]
+        },
+        {
+            "title": "LNP promises $33b spend on 15-year plan to improve Bruce Highway north of Sunshine Coast",
+            "pubDate": "2020-09-27 04:45:14",
+            "link": "http://www.abc.net.au/news/2020-09-27/lnp-promises-33-billion-spend-on-15-year-bruce-highway-plan/12708342",
+            "guid": "http://www.abc.net.au/news/2020-09-27/lnp-promises-33-billion-spend-on-15-year-bruce-highway-plan/12708342",
+            "author": "Jessica Rendall",
+            "thumbnail": "http://www.abc.net.au/news/image/4480868-4x3-140x105.jpg",
+            "description": "<p>Opposition Leader Deb Frecklington says it will take 15 years to complete, but the plan will create 100,000 jobs and will begin with a \"detailed planning study\".</p>",
+            "content": "<p>Opposition Leader Deb Frecklington says it will take 15 years to complete, but the plan will create 100,000 jobs and will begin with a \"detailed planning study\".</p>",
+            "enclosure": {
+                "link": "http://www.abc.net.au/news/image/4480868-16x9-2150x1210.jpg",
+                "type": "image/jpeg",
+                "thumbnail": "http://www.abc.net.au/news/image/4480868-4x3-140x105.jpg"
+            },
+            "categories": [
+                "Liberal National Party",
+                "Road Transport",
+                "Road",
+                "State Elections"
+            ]
+        },
+        {
+            "title": "Melbourne's restrictions roadmap has changed a bit. Here's what's allowed from tomorrow",
+            "pubDate": "2020-09-27 04:27:41",
+            "link": "http://www.abc.net.au/news/2020-09-27/melbourne-coronavirus-restrictions-ease-under-roadmap-step-two/12707976",
+            "guid": "http://www.abc.net.au/news/2020-09-27/melbourne-coronavirus-restrictions-ease-under-roadmap-step-two/12707976",
+            "author": "Leonie Thorne",
+            "thumbnail": "http://www.abc.net.au/news/image/12706148-4x3-140x105.jpg",
+            "description": "<p>From tomorrow the city's curfew will be scrapped, and there'll also no longer be a limit on how many people from a single household can go grocery shopping. Here's more details on what's changing in Melbourne.</p>",
+            "content": "<p>From tomorrow the city's curfew will be scrapped, and there'll also no longer be a limit on how many people from a single household can go grocery shopping. Here's more details on what's changing in Melbourne.</p>",
+            "enclosure": {
+                "link": "http://www.abc.net.au/news/image/12706148-16x9-2150x1210.jpg",
+                "type": "image/jpeg",
+                "thumbnail": "http://www.abc.net.au/news/image/12706148-4x3-140x105.jpg"
+            },
+            "categories": [
+                "Health",
+                "Diseases and Disorders",
+                "COVID-19",
+                "Epidemics and Pandemics",
+                "Government and Politics",
+                "Social Distancing",
+                "Lockdown",
+                "Community and Society"
+            ]
+        },
+        {
+            "title": "Man and woman arrested and charged after stolen car crashes in Adelaide",
+            "pubDate": "2020-09-27 04:23:52",
+            "link": "http://www.abc.net.au/news/2020-09-27/sa-police-arrest-three-over-adelaide-road-incidents/12708354",
+            "guid": "http://www.abc.net.au/news/2020-09-27/sa-police-arrest-three-over-adelaide-road-incidents/12708354",
+            "author": "",
+            "thumbnail": "http://www.abc.net.au/news/image/12255552-4x3-140x105.jpg",
+            "description": "<p>SA Police arrest and charge a man and a woman who allegedly crashed a stolen car early this morning. In a separate incident, a man is charged over erratic driving in Adelaide's foothills.</p>",
+            "content": "<p>SA Police arrest and charge a man and a woman who allegedly crashed a stolen car early this morning. In a separate incident, a man is charged over erratic driving in Adelaide's foothills.</p>",
+            "enclosure": {
+                "link": "http://www.abc.net.au/news/image/12255552-16x9-2150x1210.jpg",
+                "type": "image/jpeg",
+                "thumbnail": "http://www.abc.net.au/news/image/12255552-4x3-140x105.jpg"
+            },
+            "categories": [
+                "Road",
+                "Accidents",
+                "Police",
+                "Crime",
+                "Law, Crime and Justice",
+                "Courts and Trials"
+            ]
+        },
+        {
+            "title": "Australia clinches T20 series win against New Zealand",
+            "pubDate": "2020-09-27 03:36:46",
+            "link": "http://www.abc.net.au/news/2020-09-27/australia-beats-new-zealand-by-eight-wickets-in-t20-brisbane/12702400",
+            "guid": "http://www.abc.net.au/news/2020-09-27/australia-beats-new-zealand-by-eight-wickets-in-t20-brisbane/12702400",
+            "author": "",
+            "thumbnail": "http://www.abc.net.au/news/image/12708616-4x3-140x105.jpg",
+            "description": "<p>Australia takes an unassailable 2-0 lead in its T20 series against New Zealand, following an eight-wicket triumph at Allan Border Field in Brisbane. </p>",
+            "content": "<p>Australia takes an unassailable 2-0 lead in its T20 series against New Zealand, following an eight-wicket triumph at Allan Border Field in Brisbane. </p>",
+            "enclosure": {
+                "link": "http://www.abc.net.au/news/image/12708616-16x9-2150x1210.jpg",
+                "type": "image/jpeg",
+                "thumbnail": "http://www.abc.net.au/news/image/12708616-4x3-140x105.jpg"
+            },
+            "categories": [
+                "Sport",
+                "Cricket",
+                "Twenty20"
+            ]
+        },
+        {
+            "title": "Melbourne's curfew scrapped, third step brought forward as coronavirus restrictions eased",
+            "pubDate": "2020-09-27 02:42:11",
+            "link": "http://www.abc.net.au/news/2020-09-27/victoria-dan-andrews-unveils-melbourne-coronavirus-restrictions/12708002",
+            "guid": "http://www.abc.net.au/news/2020-09-27/victoria-dan-andrews-unveils-melbourne-coronavirus-restrictions/12708002",
+            "author": "Yara Murray-Atfield And Dan Harrison",
+            "thumbnail": "http://www.abc.net.au/news/image/12708672-4x3-140x105.jpg",
+            "description": "<p>Melbourne's curfew will be lifted, all primary school students will return to the classroom in early October and up to five people can gather outside from tomorrow, Premier Daniel Andrews announces.</p>",
+            "content": "<p>Melbourne's curfew will be lifted, all primary school students will return to the classroom in early October and up to five people can gather outside from tomorrow, Premier Daniel Andrews announces.</p>",
+            "enclosure": {
+                "link": "http://www.abc.net.au/news/image/12708672-16x9-2150x1210.jpg",
+                "type": "image/jpeg",
+                "thumbnail": "http://www.abc.net.au/news/image/12708672-4x3-140x105.jpg"
+            },
+            "categories": [
+                "Health",
+                "Diseases and Disorders",
+                "COVID-19",
+                "Epidemics and Pandemics",
+                "Government and Politics",
+                "Social Distancing",
+                "Lockdown",
+                "Community and Society"
+            ]
+        }
+    ]
+}
