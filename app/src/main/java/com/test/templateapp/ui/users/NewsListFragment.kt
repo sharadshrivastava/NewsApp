@@ -39,6 +39,9 @@ class NewsListFragment : Fragment() {
         setupDivider()
         observeFeeds()
         handleItemClick()
+        refresh.setOnRefreshListener {
+            observeFeeds()
+        }
     }
 
     private fun setupDivider() {
@@ -52,13 +55,16 @@ class NewsListFragment : Fragment() {
         vm.feeds.observe(viewLifecycleOwner) {
             when (it.status) {
                 LOADING -> binding.isLoading = true
-                SUCCESS -> binding.isLoading = false
-                ERROR -> {
-                    binding.isLoading = false
-                    showErrorBar(it.message)
-                }
+                SUCCESS -> handleResponse()
+                ERROR -> handleResponse(false, it.message)
             }
         }
+    }
+
+    private fun handleResponse(isSuccess: Boolean = true, msg: String? = null) {
+        binding.isLoading = false
+        if (refresh.isRefreshing) refresh.isRefreshing = false
+        if (!isSuccess) showErrorBar(msg)
     }
 
     private fun handleItemClick() {

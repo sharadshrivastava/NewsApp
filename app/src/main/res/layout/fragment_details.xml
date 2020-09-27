@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="isLoading"
-            type="boolean" />
+            name="item"
+            type="com.test.templateapp.domain.model.Item" />
 
         <import type="android.view.View" />
     </data>
@@ -14,29 +14,52 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.users.NewsListFragment">
+        android:layout_height="match_parent">
 
-        <ProgressBar
-            android:id="@+id/pbLoading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="@{isLoading ? View.VISIBLE : View.GONE}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/details_img_height"
+            android:contentDescription="@string/description"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:downloadUrl='@{item.enclosure.link}'
+            tools:src="@drawable/sample_big" />
 
         <TextView
-            android:id="@+id/message"
+            android:id="@+id/newsTitle"
+            style="@style/BlackStyle.TitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_margin"
+            android:layout_marginBottom="@dimen/std_margin"
+            android:layout_marginStart="@dimen/std_margin"
+            android:text='@{item.title}'
+            android:layout_marginEnd="@dimen/std_tiny_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newsImage"
+            tools:text="Paramount Film Studio to layoff 5% of its people. Paramount Film Studio to layoff 5% of its people. Paramount Film Studio to layoff 5% of its peoples." />
+
+        <TextView
+            android:id="@+id/newsTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DetailsFragment"
-            android:visibility="@{isLoading ? View.GONE : View.VISIBLE}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:formattedDate='@{item.pubDate}'
+            app:layout_constraintStart_toStartOf="@id/newsTitle"
+            app:layout_constraintTop_toBottomOf="@id/newsTitle"
+            android:layout_marginTop="@dimen/std_tiny_margin"
+            tools:text="Mar 31,2014 12:37 AM" />
 
+        <TextView
+            android:id="@+id/newsDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/BlackStyle"
+            app:htmlText='@{item.content}'
+            android:layout_marginTop="@dimen/std_margin"
+            app:layout_constraintStart_toStartOf="@id/newsTitle"
+            app:layout_constraintTop_toBottomOf="@id/newsTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="The Gold Coast Titans say they will work with the NRL as it investigates an alleged incident of racial abuse against the team's Tyrone Peachey." />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

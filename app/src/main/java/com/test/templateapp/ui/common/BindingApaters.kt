@@ -2,6 +2,7 @@ package com.test.templateapp.ui.common
 
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.text.HtmlCompat
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import java.text.SimpleDateFormat
@@ -18,4 +19,9 @@ fun formatDate(textView: TextView, dateStr: String?) {
     dateStr?.let {
         sdfFrom.parse(dateStr)?.let { textView.text = sdfTo.format(it) }
     }
+}
+
+@BindingAdapter("htmlText")
+fun htmlText(textView: TextView, text: String) {
+    textView.text = HtmlCompat.fromHtml(text, HtmlCompat.FROM_HTML_MODE_LEGACY)
 }

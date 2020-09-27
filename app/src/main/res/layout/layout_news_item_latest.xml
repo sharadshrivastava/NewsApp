@@ -20,7 +20,7 @@
         <ImageView
             android:id="@+id/newsImage"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/title_img_height"
             android:contentDescription="@string/description"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -29,7 +29,7 @@
 
         <TextView
             android:id="@+id/newsTitle"
-            style="@style/TitleStyle"
+            style="@style/BlackStyle.TitleStyle"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/std_margin"
