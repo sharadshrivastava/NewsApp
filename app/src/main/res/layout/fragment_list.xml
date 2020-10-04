@@ -27,7 +27,7 @@
             android:background="@color/colorGrayBg">
 
             <ProgressBar
-                android:id="@+id/pbLoading"
+                android:id="@+id/loading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="@{isLoading ? View.VISIBLE : View.GONE}"
@@ -37,7 +37,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvList"
+                android:id="@+id/newsList"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/std_margin"
@@ -57,11 +57,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:visibility="@{isLoading ? View.GONE : View.VISIBLE}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rvList" />
+                app:layout_constraintTop_toBottomOf="@id/newsList" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

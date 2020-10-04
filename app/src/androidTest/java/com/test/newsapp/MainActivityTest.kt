@@ -27,7 +27,7 @@ class MainActivityTest {
     @Test
     fun testFragmentLoaded() {
         rule.scenario.onActivity {
-            val fragment = it.nav_host_fragment
+            val fragment = it.navHostFragment
             Assert.assertNotNull(fragment)
         }
     }

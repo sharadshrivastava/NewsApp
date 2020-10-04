@@ -8,7 +8,6 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import org.junit.After
-import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -31,13 +30,13 @@ class NewsListFragmentTest {
 
     @Test
     fun testProgressBar() {
-        onView(withId(R.id.pbLoading)).check(matches(withEffectiveVisibility(Visibility.VISIBLE)));
+        onView(withId(R.id.loading)).check(matches(withEffectiveVisibility(Visibility.VISIBLE)));
     }
 
     @Test
     fun testListVisible() {
         Thread.sleep(2000) //to load data
-        onView(withId(R.id.rvList)).check(matches(isDisplayed()))
+        onView(withId(R.id.newsList)).check(matches(isDisplayed()))
     }
 
     //In the same way, using espresso we can test other UI components.

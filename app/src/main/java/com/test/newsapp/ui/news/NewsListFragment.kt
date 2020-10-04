@@ -47,7 +47,7 @@ class NewsListFragment : Fragment() {
         val itemDecorator = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
         ContextCompat.getDrawable(requireContext(), R.drawable.divider)
             ?.let { itemDecorator.setDrawable(it) }
-        rvList.addItemDecoration(itemDecorator)
+        newsList.addItemDecoration(itemDecorator)
     }
 
     private fun observeFeeds() {
