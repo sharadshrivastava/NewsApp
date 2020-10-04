@@ -14,6 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class NewsDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailsBinding
+    private val args by navArgs<NewsDetailsFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,7 +25,6 @@ class NewsDetailsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val args by navArgs<NewsDetailsFragmentArgs>()
         binding.item = args.item
     }
 }
