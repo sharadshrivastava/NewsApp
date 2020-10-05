@@ -46,8 +46,11 @@ class GenericRecyclerViewAdapter(
     }
 
     override fun getItemViewType(position: Int): Int {
-        return if (layoutIDs.size > 1) if (position == 0) layoutIDs[0] else layoutIDs[1]
-        else super.getItemViewType(position)
+        return if (layoutIDs.size > 1) {
+            if (position == 0) layoutIDs[0] else layoutIDs[1]
+        } else {
+            layoutIDs[0]
+        }
     }
 
     fun setItems(list: List<Any>?) {
