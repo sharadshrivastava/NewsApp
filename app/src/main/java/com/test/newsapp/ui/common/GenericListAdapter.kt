@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.test.newsapp.BR
 
@@ -14,7 +13,7 @@ fun <T> configureRecyclerView(
     recyclerView: RecyclerView,
     items: List<Any>?,
     layoutIDs: Array<Int>,
-    clickListener: MutableLiveData<out Any>?
+    clickListener: ItemClickListener
 ) {
     if (recyclerView.adapter == null) {
         recyclerView.adapter = GenericRecyclerViewAdapter(items, layoutIDs, clickListener)
@@ -26,7 +25,7 @@ fun <T> configureRecyclerView(
 class GenericRecyclerViewAdapter(
     var list: List<Any>?,
     private val layoutIDs: Array<Int>,
-    private val clickListener: MutableLiveData<out Any>?
+    private val clickListener: ItemClickListener
 ) : RecyclerView.Adapter<GenericRecyclerViewAdapter.GenericViewHolder<Any>>() {
 
     private lateinit var binding: ViewDataBinding
@@ -59,14 +58,18 @@ class GenericRecyclerViewAdapter(
     }
 
     class GenericViewHolder<T>(
-        private val binding: ViewDataBinding, private val clickListener: MutableLiveData<out Any>?
+        private val binding: ViewDataBinding, private val clickListener: ItemClickListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: T?) {
             binding.setVariable(BR.item, item)
             itemView.setOnClickListener {
-                clickListener?.value = item
+                clickListener.onItemClick(item)
             }
         }
     }
+}
+
+interface ItemClickListener {
+    fun onItemClick(item: Any?)
 }

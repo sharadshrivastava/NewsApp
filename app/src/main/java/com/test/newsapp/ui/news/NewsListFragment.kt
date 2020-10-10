@@ -13,12 +13,14 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import com.test.newsapp.R
 import com.test.newsapp.data.network.Resource.Status.*
 import com.test.newsapp.databinding.FragmentListBinding
+import com.test.newsapp.domain.model.Item
+import com.test.newsapp.ui.common.ItemClickListener
 import com.test.newsapp.ui.common.showErrorBar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_list.*
 
 @AndroidEntryPoint
-class NewsListFragment : Fragment() {
+class NewsListFragment : Fragment(), ItemClickListener {
 
     private val vm: NewsViewModel by viewModels()
     private lateinit var binding: FragmentListBinding
@@ -31,13 +33,13 @@ class NewsListFragment : Fragment() {
             binding = this
             lifecycleOwner = this@NewsListFragment
             vm = this@NewsListFragment.vm
+            clickListener = this@NewsListFragment
         }.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setupDivider()
         observeFeeds()
-        handleItemClick()
         refresh.setOnRefreshListener {
             observeFeeds()
         }
@@ -66,13 +68,10 @@ class NewsListFragment : Fragment() {
         if (!isSuccess) showErrorBar(msg)
     }
 
-    private fun handleItemClick() {
-        vm.clickListener.observe(viewLifecycleOwner) {
-            if (it != null) {
-                view?.findNavController()
-                    ?.navigate(NewsListFragmentDirections.listFragmentAction(it))
-                vm.clickListener.value = null
-            }
+    override fun onItemClick(item: Any?) {
+        if (item is Item) {
+            view?.findNavController()
+                ?.navigate(NewsListFragmentDirections.listFragmentAction(item))
         }
     }
 }
